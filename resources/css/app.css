@@ -1,0 +1,651 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif!important;
+}
+
+body p {
+    font-family: 'Lato', sans-serif!important;
+}
+
+.contextImg {
+    position: absolute;
+    width: auto;
+    top: 15%;
+}
+
+.context {
+    width: 100%;
+    top: 20%;
+    position: absolute;
+}
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:115vh;
+}
+
+.changingColor {
+    color: black;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+/* PRELOADER */
+
+.wrapper{
+    position: absolute;
+    float: left;
+    margin: 140px 100px;
+}
+
+.line{
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    height: 8px;
+    background-color: red;
+}
+
+.circle{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: blue;
+}
+.circle-top{
+    top: 0px;
+    left: -3.5px;
+}
+.circle-bottom{
+    bottom: 0px;
+    left: -3.5px;
+}
+
+.dot{
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: -1.5px;
+}
+
+.line1{
+    margin-left: 0px;
+    background-color: #2410CB;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > span{
+    background-color: #D4141E;
+}
+.line1 > .dotted > .dot{
+    background-color: #D4141E;
+}
+.line1 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+.line1 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+}
+
+.line2{
+    margin-left: 35px;
+    background-color: #852DF4;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > span{
+    background-color: #FC7E48;
+}
+.line2 > .dotted > .dot{
+    background-color: #FC7E48;
+}
+.line2 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+.line2 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .05s infinite;
+}
+
+.line3{
+    margin-left: 70px;
+    background-color: #F42DF1;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > span{
+    background-color: #EDEB29;
+}
+.line3 > .dotted > .dot{
+    background-color: #EDEB29;
+}
+.line3 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+.line3 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .1s infinite;
+}
+
+.line4{
+    margin-left: 105px;
+    background-color: #F91396;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > span{
+    background-color: #ACED29;
+}
+.line4 > .dotted > .dot{
+    background-color: #ACED29;
+}
+.line4 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+.line4 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .15s infinite;
+}
+
+.line5{
+    margin-left: 140px;
+    background-color: #D4141E;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > span{
+    background-color: #4EF02B;
+}
+.line5 > .dotted > .dot{
+    background-color: #4EF02B;
+}
+.line5 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+.line5 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .2s infinite;
+}
+
+.line6{
+    margin-left: 175px;
+    background-color: #FC7E48;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > span{
+    background-color: #38E790;
+}
+.line6 > .dotted > .dot{
+    background-color: #38E790;
+}
+.line6 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+.line6 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .25s infinite;
+}
+
+.line7{
+    margin-left: 210px;
+    background-color: #EDEB29;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > span{
+    background-color: #25EACC;
+}
+.line7 > .dotted > .dot{
+    background-color: #25EACC;
+}
+.line7 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+.line7 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .3s infinite;
+}
+
+.line8{
+    margin-left: 245px;
+    background-color: #ACED29;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > span{
+    background-color: #309CDF;
+}
+.line8 > .dotted > .dot{
+    background-color: #309CDF;
+}
+.line8 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+.line8 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .35s infinite;
+}
+
+.line9{
+    margin-left: 280px;
+    background-color: #4EF02B;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > span{
+    background-color: #2544E7;
+}
+.line9 > .dotted > .dot{
+    background-color: #2544E7;
+}
+.line9 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+.line9 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .4s infinite;
+}
+
+.line10{
+    margin-left: 315px;
+    background-color: #38E790;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > span{
+    background-color: #852DF4;
+}
+.line10 > .dotted > .dot{
+    background-color: #852DF4;
+}
+.line10 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+.line10 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .45s infinite;
+}
+
+.line11{
+    margin-left: 350px;
+    background-color: #25EACC;
+    -webkit-animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: line 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+.line11 > span{
+    background-color: #F42DF1;
+}
+.line11 > .dotted > .dot{
+    background-color: #F42DF1;
+}
+.line11 > .dotted > .dot-top{
+    top: 0px;
+    -webkit-animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+
+}
+.line11 > .dotted > .dot-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+.line11 > .dotted > .dot-middle-top{
+    top: 0px;
+    -webkit-animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-middle-top 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+.line11 > .dotted > .dot-middle-bottom{
+    bottom: 0px;
+    -webkit-animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+    animation: dot-middle-bottom 2s cubic-bezier(0.250, 0, 0.705, 1) .5s infinite;
+}
+
+@-webkit-keyframes line{
+    0%{height: 4px; top: 0px; left: 0px; -webkit-transform: rotate(-65deg)}
+    10%{height: 220px; top: -110px; left: 15px;}
+    45%{height: 200px; top: -100px; left: 25px;}
+    70%{height: 8px; top: 0px; left: 25px; -webkit-transform: rotate(0deg);}
+    100%{height: 8px; top: 0px; left: 15px; -webkit-transform: rotate(0deg);}
+}
+@-webkit-keyframes dot-top{
+    0%{top: -30px}
+    10%{top: -30px;}
+    45%{top: -25px;}
+    60%{top: 0px;}
+    100%{top: 0px;}
+}
+@-webkit-keyframes dot-bottom{
+    0%{bottom: -30px}
+    10%{bottom: -30px;}
+    45%{bottom: -25px;}
+    60%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+@-webkit-keyframes dot-middle-top{
+    0%{}
+    10%{}
+    45%{top: 98px;}
+    70%{top: -50px;}
+    85%{top: 0px;}
+    100%{top: 0px;}
+}
+@-webkit-keyframes dot-middle-bottom{
+    0%{}
+    10%{}
+    45%{bottom: 98px;}
+    70%{bottom: -50px;}
+    85%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+
+@keyframes line{
+    0%{height: 4px; top: 0px; left: 0px; transform: rotate(-65deg)}
+    10%{height: 220px; top: -110px; left: 15px;}
+    45%{height: 200px; top: -100px; left: 25px;}
+    70%{height: 8px; top: 0px; left: 25px; transform: rotate(0deg);}
+    100%{height: 8px; top: 0px; left: 15px; transform: rotate(0deg);}
+}
+@keyframes dot-top{
+    0%{top: -30px}
+    10%{top: -30px;}
+    45%{top: -25px;}
+    60%{top: 0px;}
+    100%{top: 0px;}
+}
+@keyframes dot-bottom{
+    0%{bottom: -30px}
+    10%{bottom: -30px;}
+    45%{bottom: -25px;}
+    60%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+@keyframes dot-middle-top{
+    0%{}
+    10%{}
+    45%{top: 78px;}
+    70%{top: -50px;}
+    85%{top: 0px;}
+    100%{top: 0px;}
+}
+@keyframes dot-middle-bottom{
+    0%{}
+    10%{}
+    45%{bottom: 78px;}
+    70%{bottom: -50px;}
+    85%{bottom: 0px;}
+    100%{bottom: 0px;}
+}
+
+/* ERROR CSS */
+
+#error-page{background:#fff;margin:auto;text-align:center;padding:0 10px;width:100%;max-width:1100px;-webkit-box-sizing:border-box;box-sizing:border-box}
+#error-inner{padding:9% auto 35px;padding:0;list-style:none!important}
+#error-inner .box-404{display:inline-block;position:relative;font-weight:bold;width:200px;height:200px;background:#e84118;color:#fff;font-size:70px;line-height:190px;margin:25px auto}
+#error-inner .box-404::after{content:'';width:0;height:0;position:absolute;top:0;right:0;border-width:30px;border-style:solid;border-color:#fff #fff transparent transparent;display:block}
+#error-inner .box-404::before{content:'';width:0;height:0;position:absolute;top:0;left:0;border-width:30px;border-style:solid;border-color:#fff transparent transparent #fff;display:block}
+#error-inner .box-404 div::after{content:'';width:0;height:0;position:absolute;bottom:0;left:0;border-width:30px;border-style:solid;border-color:transparent transparent #fff #fff;display:block}
+#error-inner .box-404 div::before{content:'';width:0;height:0;position:absolute;bottom:0;right:0;border-width:30px;border-style:solid;border-color:transparent #fff #fff transparent;display:block}
+#error-inner h3{text-transform:uppercase;color:#ed5858;font-size:50px;margin:0 auto 20px;font-weight:700;letter-spacing:10px}
+#error-inner h2{color:#2d2d2d;font-weight:700;line-height:1.4em;font-size:30px}
+#error-inner p{line-height:1.7em;font-size:18px;color:#111;margin:15px auto 0 auto}
+@media screen and (max-width:600px){#error-inner{margin:5% auto 35px}}
+
+/* UTILITIES */
+
+.marginb {
+    margin-bottom: 1rem !important;
+}
